@@ -1,0 +1,88 @@
+Carlos Mayol
+
+employee id 1871044
+
+ILP TCS 2020
+
+MiniWeb assigment:
+	The Database is based on simple data about buildings and other 
+	architectural examples of Chicago.
+	
+The worksheet can be found commented at the top of the ChicagoArchitecturalDao
+in the following path MiniWeb/Java Resources/src/com/dal/ChicagoArchitecturalDao.java
+
+
+Issues:
+	I encounter the following issues trying to set up the table for this assignment.
+	
+		ORA-00603: ORACLE server session terminated by fatal error
+		ORA-00600: internal error code, arguments: [kqlidchg1], [], [], [], [], [], [], [], [], [], [], []
+		ORA-00604: error occurred at recursive SQL level 1
+		ORA-00001: unique constraint (SYS.I_PLSCOPE_SIG_IDENTIFIER$) violated
+		00603. 00000 –  “ORACLE server session terminated by fatal error”
+		*Cause:    An ORACLE server session is in an unrecoverable state.
+		*Action:   Login to ORACLE again so a new server session will be created
+		
+	To resolve the issue I found a solution on the Internet (link : https://oraclespot.wordpress.com/2012/11/05/plscope/)
+		"The root cause is in the plscope_settings. 
+		If you use SQL Developer try to change PLSCOPE_SETTINGS to NONE from menu 
+		Tools->Preferences->Database->PL/SQL Compiler->PLScope Identifiers."
+		
+		
+Database worksheet:
+
+ CREATE TABLE cm1871044_CHICAGO_ARCHITECTURE 
+(
+    BUILDING_ID NUMBER(12,0) primary key, 
+    BUILDING_NAME VARCHAR2(60 BYTE) NOT NULL, 
+    ARCHITECTS VARCHAR2(60 BYTE) NOT NULL,
+    ADDRESS VARCHAR2 (80 CHAR) NOT NULL,
+    YEAR_BUILT NUMBER(6,0) 
+);
+
+--CREATE SEQUENCE id
+CREATE SEQUENCE BUILDING_ID_SEQ MINVALUE 1 START WITH 1 INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER BUILDING_TR
+    BEFORE INSERT
+     ON cm1871044_CHICAGO_ARCHITECTURE REFERENCING NEW as New OLD as Old
+     FOR EACH ROW
+        WHEN (New.building_id is null)
+         BEGIN
+          :new.building_id := building_id_seq.nextval;
+        END;
+/
+--ALTER TRIGGER BUILDING_TR ENABLE;
+
+SET DEFINE OFF; --Turn off substitution variables.
+Insert into cm1871044_CHICAGO_ARCHITECTURE (BUILDING_NAME, ARCHITECTS, ADDRESS, YEAR_BUILT) values ('Robie House' , 'Frank Lloyd Wright', '5757 S Woodlawn Ave', 1909);
+Insert into cm1871044_CHICAGO_ARCHITECTURE (BUILDING_NAME, ARCHITECTS, ADDRESS, YEAR_BUILT) values ('Navy Pier', 'D. Burnham '|| chr(38) ||' E. H. Bennett', '600 E. Grand Avenue', 1916);
+Insert into cm1871044_CHICAGO_ARCHITECTURE (BUILDING_NAME, ARCHITECTS, ADDRESS, YEAR_BUILT) values ('DuSable Bridge', 'E. H. Bennett', 'Michigan Avenue', 1920);
+Insert into cm1871044_CHICAGO_ARCHITECTURE (BUILDING_NAME, ARCHITECTS, ADDRESS, YEAR_BUILT) values ('Wrigley Building', 'GAP '|| chr(38) ||' W', '400-410 N. Michigan Ave', 1924);
+Insert into cm1871044_CHICAGO_ARCHITECTURE (BUILDING_NAME, ARCHITECTS, ADDRESS, YEAR_BUILT) values ('John Hancock Center', 'F. R. Khan '|| chr(38) ||' SOM', '875 North Michigan', 1969);
+Insert into cm1871044_CHICAGO_ARCHITECTURE (BUILDING_NAME, ARCHITECTS, ADDRESS, YEAR_BUILT) values ('330 North Wabash', 'Ludwig Mies van der Rohe', '330 North Wabash', 1973);
+Insert into cm1871044_CHICAGO_ARCHITECTURE (BUILDING_NAME, ARCHITECTS, ADDRESS, YEAR_BUILT) values ('Millennium Park', 'Many', '201 E Randolph St' , 2004);
+
+commit;
+
+------------------------------/End of SQL worksheet
+
+Other references:
+	Apart from all the documentation, videos and training from ILP the below web sites serve as a
+	guide to work in this assignment.
+	
+		https://www.w3schools.com/CSS/tryit.asp?filename=trycss_ex_images_responsive
+		https://oraclespot.wordpress.com/2012/11/05/plscope/
+		https://en.wikipedia.org/wiki/List_of_colors:_A%E2%80%93F
+		stackoverflow.com
+			eclipse forums
+			sql forums
+			javascript forums
+		https://www.w3schools.com/CSSref/pr_list-style-type.asp
+		oracle website
+		community.oracle.com
+	
+	
+	
+END OF README
+		

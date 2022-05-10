@@ -1,0 +1,51 @@
+Carlos Mayol
+
+employee id: 1871044
+
+ILP TCS NOAM 2020
+
+Assignment: Calculator
+	This JavaScript/HTML project implements a simple calculator that the user can
+	use to do simple math. I attempt to keep the code to a minimum and try to follow 
+	the principle of separation of concern by delegating all style routines
+	to the file 'calculatorStyle.css'. This way I can make use of graphic features
+	provided by the Cascading Style Sheets language and keep the project organized.
+	Separating the JavaScript code from the HTML is still pending. Please refer to the
+	below section "Problems" for a description.
+	
+Problems:
+	In trying to link the JavaScrip file 'calculate.js' to the HTML file 'calculator.html'
+	the functionality of the calculator stopped and couldn't find the reason after debbuging.
+	I resolved this by including a <script> tag inside the html with all the variable functions.
+	
+	The linkage of the 'calculator.js' file would only allowed the function expression to work 
+	whenever this method was the only element included in the file. Other methods created some
+	kind of conflict that I still cannot understand.
+	
+Supported by the calculator:
+	*	Simple math operations like sum, subtraction, multiplication and division.
+	
+	*	The user is allowed to declared a variable at start of the calculation by typing
+		a letter from the keyboard and typing the equal sing. Then, all operations can be 
+		executed with the buttons in the screen.
+	
+	*	If a letter that is not a variable is entered, the calculator screen is cleared and 
+		the expression is lost but the user can input another expression.
+	
+	*	I division by zero will trigger a popup alert.
+
+Reference:
+	Apart from all the documentation, videos and training from ILP the below web sites serve as a
+	guide to work in this assignment.
+	
+		https://www.w3schools.com/CSS/tryit.asp?filename=trycss_ex_images_responsive
+		https://en.wikipedia.org/wiki/List_of_colors:_A%E2%80%93F
+		stackoverflow.com
+			eclipse forums
+			html forums
+			javascript forums
+		https://www.w3schools.com/CSSref/pr_list-style-type.asp
+		https://www.tutorialspoint.com/How-do-we-use-a-simple-drop-down-list-of-items-in-HTML-forms
+		https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
+		
+END OF README FILE
