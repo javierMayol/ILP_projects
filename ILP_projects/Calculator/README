@@ -8,14 +8,13 @@ Assignment: Calculator
 	This JavaScript/HTML project implements a simple calculator that can be
 	used to do simple math. I attempt to keep the code to a minimum and try to follow 
 	the principle of separation of concern by delegating all style routines
-	to the file 'calculatorStyle.css'. This way I can make use of graphic features
-	provided by the Cascading Style Sheets language and keep the project organized.
-	Separating the JavaScript code from the HTML is still pending. Please refer to the
+	to the file 'calculatorStyle.css'. This way I can include graphics in CSS and keep the project organized.
+	Separating the JavaScript code from the HTML is pending. Please refer to the
 	below section "Problems" for a description.
 	
 Problems:
 	In trying to link the JavaScrip file 'calculate.js' to the HTML file 'calculator.html'
-	the functionality of the calculator stopped and couldn't find the reason after debbuging.
+	the functionality of the calculator stopped and I couldn't find the reason after debbuging.
 	I resolved this by including a <script> tag inside the html with all the variable functions.
 	
 	The linkage of the 'calculator.js' file would only allowed the function expression to work 
