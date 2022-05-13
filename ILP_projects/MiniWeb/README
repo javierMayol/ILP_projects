@@ -5,11 +5,11 @@ employee id 1871044
 ILP TCS 2020
 
 MiniWeb assigment:
-	The Database is based on simple data about buildings and other 
+	This solution uses a database that is based on simple data about buildings and other 
 	architectural examples of Chicago.
 	
-The worksheet can be found commented at the top of the ChicagoArchitecturalDao
-in the following path MiniWeb/Java Resources/src/com/dal/ChicagoArchitecturalDao.java
+	The worksheet can be found commented at the top of the ChicagoArchitecturalDao
+	in the following path MiniWeb/Java Resources/src/com/dal/ChicagoArchitecturalDao.java
 
 
 Issues:
@@ -19,9 +19,9 @@ Issues:
 		ORA-00600: internal error code, arguments: [kqlidchg1], [], [], [], [], [], [], [], [], [], [], []
 		ORA-00604: error occurred at recursive SQL level 1
 		ORA-00001: unique constraint (SYS.I_PLSCOPE_SIG_IDENTIFIER$) violated
-		00603. 00000 –  “ORACLE server session terminated by fatal error”
-		*Cause:    An ORACLE server session is in an unrecoverable state.
-		*Action:   Login to ORACLE again so a new server session will be created
+		00603. 00000 â€“Â  â€œORACLE server session terminated by fatal errorâ€
+		*Cause:Â Â Â  An ORACLE server session is in an unrecoverable state.
+		*Action:Â Â  Login to ORACLE again so a new server session will be created
 		
 	To resolve the issue I found a solution on the Internet (link : https://oraclespot.wordpress.com/2012/11/05/plscope/)
 		"The root cause is in the plscope_settings. 
