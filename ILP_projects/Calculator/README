@@ -6,7 +6,7 @@ ILP TCS NOAM 2020
 
 Assignment: Calculator
 	This JavaScript/HTML project implements a simple calculator that can be
-	used to do simple math. I attempt to keep the code simple by decoupling style routines
+	used to do simple math. I try to keep the code simple by decoupling style routines
 	to the file 'calculatorStyle.css', so I can include graphics in CSS and keep the project organized.
 	Separating the JavaScript code from the HTML is pending. Please refer to the
 	below section "Problems" for a description.
