@@ -5,8 +5,8 @@ employee id: ------
 ILP TCS NOAM 2020
 
 Assignment: Calculator
-	This JavaScript/HTML project implements a simple calculator that the user can
-	use to do simple math. I attempt to keep the code to a minimum and try to follow 
+	This JavaScript/HTML project implements a simple calculator that can be
+	used to do simple math. I attempt to keep the code to a minimum and try to follow 
 	the principle of separation of concern by delegating all style routines
 	to the file 'calculatorStyle.css'. This way I can make use of graphic features
 	provided by the Cascading Style Sheets language and keep the project organized.
