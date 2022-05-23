@@ -13,83 +13,51 @@ ILP TCS NOAM 2020
 	<title>Non-Scientific Calculator</title>
 	<meta charset="ISO-8859-1">	
 	<link href="calculatorStyle.css" rel="stylesheet" type="text/css" >
-	<!-- script type="text/javascript" src="calculate.js"></script -->
-	<script>
-		 
-		//expression builds the expression entered by user by concatinating the 
-		//inputs entered.
-		
-		var expression = function (id)
-		{
-			document.getElementById("result").value += document.getElementById(id).value;
-			
-		};
-		
-		//function that clear the display
-		var clr = function ()
-	    { 
-	   		document.getElementById("result").value = ""
-	    };
-		
-		//when the equla sign operator is pressed, the solve method is called.
-		//This method evalutes the expression enter by the user with the builting
-		//eval() function.
-		var solve = function () 
-	    { 
-	    	let x = document.getElementById("result").value 
-		
-		
-			if(x != "[0-9 +-*\./]+")
-				document.getElementById("result").value = ""
+	< script type="text/javascript" src="calculate.js" ></script>
 	
-			let y = eval(x) 
-	
-			if(y == "Infinity")
-				alert("Cannot divide by zero")
-			else
-	    		document.getElementById("result").value = y 
-	   	}
-	 
-	</script>
 </head>
-<body>
+	
+<body  align="center">
 	<h2>HTML Calculator</h2>
 	<textarea class="calc_screen" id="result" value = "enter value" ></textarea>
 
-	<table>
+	<table  align="center">
 		<tr>
-		<td><button id="seven" class= "calc_key" value="7" onclick="expression(this.id);">7</button></td>
-		<td><button id="eight" class= "calc_key" value=8 onclick="expression(this.id);">8</button></td>
-		<td><button id="nine" class= "calc_key" value=9 onclick="expression(this.id);">9</button></td>
+		<td><button id="7" class= "calc_key" value=7 onclick="expression(this.id);">7</button></td>
+		<td><button id="8" class= "calc_key" value=8 onclick="expression(this.id);">8</button></td>
+		<td><button id="9" class= "calc_key" value=9 onclick="expression(this.id);">9</button></td>
+      
+    <td><button id="+" class= "calc_key" value=+ onclick="expression(this.id);">+</button></td>
+	
+    </tr>
+		<tr>
+		<td><button id="4" class= "calc_key" value=4 onclick="expression(this.id);">4</button></td>
+		<td><button id="5" class= "calc_key" value=5 onclick="expression(this.id);">5</button></td>
+		<td><button id="6" class= "calc_key" value=6 onclick="expression(this.id);">6</button></td>
+      <td><button id="-" class= "calc_key" value=- onclick="expression(this.id);">-</button></td>
 		<td>
-			<form id = "operants">
-			
-	         <select class="drpdwncss" id="menu" name="menu">
-	            <option id="sum" value='+' onclick="expression(this.id);" >+</option>
-	            <option id="subtract" value='-' onclick="expression(this.id);" >-</option>
-	            <option id="multiply" value='*' onclick="expression(this.id);" >x</option>
-				<option id="divide" value='/' onclick="expression(this.id);">/</option>
-				<option onclick="solve()" >=</option>
-	         </select>
-	      	</form>
-		</td>
 		</tr>
 		<tr>
-		<td><button id="four" class= "calc_key" value=4 onclick="expression(this.id);">4</button></td>
-		<td><button id="five" class= "calc_key" value=5 onclick="expression(this.id);">5</button></td>
-		<td><button id="six" class= "calc_key" value=6 onclick="expression(this.id);">6</button></td>
+		<td><button id="3" class= "calc_key" value=3 onclick="expression(this.id);">3</button></td>
+		<td><button id="2" class= "calc_key" value=2 onclick="expression(this.id);">2</button></td>
+		<td><button id="1" class= "calc_key" value=1 onclick="expression(this.id);">1</button></td>
+    <td><button id="*" class= "calc_key" value=* onclick="expression(this.id);">*</button></td>
 		</tr>
 		<tr>
-		<td><button id="three" class= "calc_key" value=3 onclick="expression(this.id);">3</button></td>
-		<td><button id="two" class= "calc_key" value=2 onclick="expression(this.id);">2</button></td>
-		<td><button id="one" class= "calc_key" value=1 onclick="expression(this.id);">1</button></td>
-		</tr>
-		<tr>
-		<td><button id="period" class= "calc_key" value='.' onclick="expression(this.id);">.</button></td>
-		<td><button id="zero" class= "calc_key" value=0 onclick="expression(this.id);">0</button></td>
+		<td><button id="." class= "calc_key" value='.' onclick="expression(this.id);">.</button></td>
+		<td><button id="0" class= "calc_key" value=0 onclick="expression(this.id);">0</button></td>
 		<td><button id = "clear" class= "calc_key" value="" onclick="clr()">AC</button></td>
-		
+		<td><button id="/" class= "calc_key" value=/ onclick="expression(this.id);">/</button></td>
 		</tr>
+    <tr >
+      <td>
+        <td>
+          <td>
+             <td><button id="equals" class= "calc_key" value='=' onclick="solve()">=</button></td>
+          </td>
+         </td>
+      </td>
+    </tr>
 	</table>
 	
 </body>
