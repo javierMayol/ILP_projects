@@ -11,31 +11,31 @@
 	
 	var expression = function (id)
 	{
-		document.getElementById("result").value += document.getElementById(id).value;
-		
+    //var val = document.getElementById(id).value;
+		document.getElementById("result").value += id;
 	};
 	
 	//function that clear the display
 	var clr = function ()
     { 
-   		document.getElementById("result").value = ""
+   		var d = document.getElementById("result");
+      d.value = "";
+      d.placeholder = "";
     };
 	
 	//when the equla sign operator is pressed, the solve method is called.
 	//This method evalutes the expression enter by the user with the builting
 	//eval() function.
 	var solve = function () 
-    { 
-    	let x = document.getElementById("result").value 
-	
-	
+  { 
+    let x = document.getElementById("result").value;
 		if(x != "[0-9 +-*\./]+")
-			document.getElementById("result").value = ""
+			document.getElementById("result").value = "";
 
-		let y = eval(x) 
-
+		let y = eval(x);
+    console.log(y);
 		if(y == "Infinity")
-			document.getElementById("result").value = "Cannot divide by zero"
+			document.getElementById("result").placeholder = "Cannot divide by zero";
 		else
-    		document.getElementById("result").value = y 
-   	}
+    		document.getElementById("result").value = y;
+  };
