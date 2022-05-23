@@ -11,46 +11,6 @@
 
 body{
 	font-family: helvetica;
-	color: white;
-	background-color: black;
+	
 	margin-left: 200px;
 }
-#result{
-	display:inline-block;
-	margin-right: 10px;
-}
-
-#operants{
-	display:inline-block;
-}
-
-.calc_key{
-	background-color: #333331;
-	color: white;
-	padding: 16px;
-	font-size: 30px;
-	font-family: "lucida console";
-	border: none;
-	cursor: pointer;
-}
-
-.drpdwncss{
-	font-size: 30px;
-	font-family: "lucida console";
-	margin: 0;
-	padding: 0;
-}
-
-.calc_screen{
-	font-size: 30px;
-	font-family: arial;
-	font-style: bold;
-	color: black;
-	background-color: lightblue;
-	width: 240px;
-	max-width: 1000px;
-	height: 40px;
-	size: 10;
-			overflow: auto;
-}
-	
